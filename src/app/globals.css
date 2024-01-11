@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5732c6 #00003e;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-button,
+*::-webkit-scrollbar-thumb {
+  background-color: #5732c6;
+}
+
+*::-webkit-scrollbar-track {
+  background: #00003e;
+}
+
+
+.container {
+  @apply mx-auto px-3 md:max-w-[992px] lg:max-w-[1320px]
+}
+
+.containerImg {
+  @apply ml-32
+}
+
+.active-nav::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  animation: borderGrow 0.5s forwards;
+}
+
+
+@keyframes borderGrow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+.how-item::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0;
+  border: 1px dashed #FF7A1F;
+  top: 60px;
+  left: 50%;
+}
+
+
+.imgUnset {
+  max-width: unset;
+}
+
+/* CSS to show the dropdown on hover */
+/* li:hover > ul {
+  display: block;
+} */
+
+/* Optional: CSS to style the dropdown links */
+/* ul ul {
+  display: none;
+}
+
+ul li:hover > ul {
+  display: block;
+  transition: all 0.5ms ease-in-out;
+} */
+/* .vertical-timeline--two-columns .vertical-timeline-element-icon {
+  width: 25px !important;
+  height: 25px !important;
+  left: 50%;
+  margin-left: -13px !important;
+} */
+
+.vertical-timeline-element-icon {
+  box-shadow: none !important;
+  font-size: 25px !important;
+}
+
+.vertical-timeline {
+  padding-top: 0 !important;
+}
+
+.vertical-timeline-element {
+  margin-top: 0 !important;
+}
+
+.vertical-timeline-element--work {
+  margin-bottom: 0 !important;
+}
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 50%;
+  background-color: #FF7A1F;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.swiper-button-disabled {
+  background-color: #e2d9fd !important;
+}
+
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  color: #F6F3FF !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 50%;
+  background-color: #FF7A1F;
+}
+
+
+.team .swiper-button-prev,
+.team .swiper-button-next {
+  bottom: 0 !important;
+  top: initial;
+}
+
+.team .swiper-button-next {
+  right: 40%;
+  z-index: 40px;
+}
+
+.team .swiper-button-prev {
+  left: 40%;
+  z-index: 40px;
+
+}
+
+.team .swiper-pagination {
+  z-index: -5;
+}
+
+
+
+.btn-message {
+  border-radius: 25px;
+  box-shadow: 0px 5px 0px #0b85cf, 0px 16px 4px rgba(56, 174, 246, 0.27);
+  background-image: linear-gradient(0deg, #357eff 0%, #357eff 1%, #1be9ff 100%);
+  border: 2px solid #37b0f7;
+  font-weight: 700;
+  padding: 10px 60px;
+  text-transform: uppercase;
+}
+
+
+.bg-area::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  background-color: rgba(48, 37, 111, 0.8);
+}
+
+.sectionBg {
+  background-image: url('../assets/footer/footer-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  /* height: fit-content; */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FF7A1F !important;
+}
+
+@media (max-width: 1037px) {
+  .how-item::before {
+    position: static;
+    content: '';
+    display: none;
+
+
+  }
+
+  .vertical-timeline-element--work {
+    margin-bottom: 20px !important;
+  }
+
+  .vertical-timeline-element-content {
+    position: relative;
+    margin-left: 40px !important;
+  }
+
+}
+
+@media only screen and (max-width: 925px) {
+
+  .team .swiper-button-next {
+    right: 0;
+    z-index: 40px;
+  }
+
+  .team .swiper-button-prev {
+    left: 0;
+    z-index: 40px;
+
+  }
+
+  .awesomebox .swiper-button-next,
+  .awesomebox .swiper-button-prev {
+    display: none;
+  }
+
+
+
+}
+
+
+.awesomebox .swiper-slide-next {
+  border: 1px solid #6311e7;
+  border-radius: 16px;
+}
+
+
+
+@media screen and (min-width: 1683px) {
+  .sectionBg {
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+}
+
+
+.list-card-clip-path {
+  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 53%, 0% 0%);
+}
+
+.path-warper {
+  filter: drop-shadow(10px 8px 2px #898D9B)
+}
+
+
+.shadow-card:hover {
+  box-shadow: 0px 8px 16px lightblue;
+  /* Change the shadow on hover to make it more pronounced */
+}
+
+
+.lineBoxPath {
+  -webkit-clip-path: polygon(94% 0, 100% 47%, 94% 99%, 6% 100%, 0 49%, 6% 0);
+  clip-path: polygon(97% 0, 100% 47%, 97% 99%, 3% 100%, 0 49%, 3% 0);
+}
+
+
+.ant-anchor-link-title-active{
+  color: #FC9C5B !important;
+}
+
+.ant-anchor .ant-anchor-ink{
+  background-color: #FC9C5B !important;
+}
+.ant-anchor .ant-anchor-link-title{
+  font-size: 18px !important;
+}

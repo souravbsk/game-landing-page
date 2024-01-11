@@ -1,0 +1,30 @@
+{
+  "name": "game-landing-page",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "antd": "^5.7.3",
+    "autoprefixer": "10.4.14",
+    "chart.js": "^4.3.2",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.10",
+    "next": "13.4.10",
+    "postcss": "8.4.26",
+    "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-vertical-timeline-component": "^3.6.0",
+    "swiper": "^10.0.4",
+    "tailwindcss": "3.3.3"
+  },
+  "devDependencies": {
+    "daisyui": "^3.2.1"
+  }
+}
